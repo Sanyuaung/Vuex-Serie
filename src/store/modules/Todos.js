@@ -34,6 +34,7 @@ export default {
       );
       commit("setTodo", res.data);
     },
+    
     async deleteTodo(context,removeId){
       await axios.delete(`https://jsonplaceholder.typicode.com/todos/${removeId}`)
       context.commit('removeTodo',removeId)
